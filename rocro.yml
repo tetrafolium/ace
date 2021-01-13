@@ -1,0 +1,83 @@
+---
+inspecode:
+
+  global:
+
+  tools:
+
+    clang-format:
+      auto-fix: true
+      thresholds: {num-issues: 732}
+
+    cpd:
+      options: [--skip-lexical-errors]
+      thresholds: {num-issues: 999}   # too many issues detected: 1328 > 1000
+
+    eslint:
+      auto-fix: true
+      thresholds: {num-issues: 125}
+
+    flow:
+      thresholds: {num-issues: 0}   # found no input files
+
+    fortify:
+      thresholds: {num-issues: 999}
+      ## $ sourceanalyzer -b build_id -scan -Xmx2640m -f "${OUTPUT}"
+      ## [error]: Unable to load build session with ID "build_id". See log file for more details.
+      ## Fortify finished with errors.
+
+    fossology:
+      thresholds: {num-issues: 50}
+
+    grep:
+      thresholds: {num-issues: 110}
+
+    #### HTMLHint was aborted unexpectedly.
+    htmlhint:
+      thresholds: {num-issues: 999}
+
+    jscpd:
+      thresholds: {num-issues: 410}
+
+    jshint:
+      thresholds: {num-issues: 999}   # too many issues detected: 2576 > 1000
+
+    misspell:
+      auto-fix: true
+      thresholds: {num-issues: 107}
+
+    npm-audit:
+      auto-fix: true
+      thresholds: {num-issues: 4}
+
+    npm-test:
+      thresholds: {num-issues: 0}
+
+    phpcs:
+      auto-fix: true
+      thresholds: {num-issues: 999}   # the console log exceeds the maximum size
+
+    pmd:
+      thresholds: {num-issues: 999}   # too many issues detected: 13845 > 1000
+
+    prettier:
+    - auto-fix: true
+      thresholds: {num-issues: 999}   # FATAL ERROR: CALL_AND_RETRY_LAST Allocation failed - JavaScript heap out of memory
+    - machine: {cpu: 0.5}
+      auto-fix: true
+      thresholds: {num-issues: 999}
+
+    stylelint:
+      auto-fix: true
+      thresholds: {num-issues: 479}
+
+    tidy:
+      auto-fix: true
+      thresholds: {num-issues: 999}   # too many issues detected: 1355 > 1000
+
+    # understand:
+    #   thresholds: {num-issues: 999}
+
+    unused:
+      options: [--single-occurrence, --all-likelihoods]
+      thresholds: {num-issues: 10}
