@@ -1,0 +1,76 @@
+---
+inspecode:
+
+  global:
+
+  tools:
+
+    cpd:
+      # options: [--skip-lexical-errors]
+      thresholds: {cpu: 999}
+
+    clang-format:
+      auto-fix: true
+      thresholds: {cpu: 999}
+
+    eslint:
+      auto-fix: true
+      thresholds: {cpu: 999}
+
+    flow:
+      thresholds: {cpu: 999}
+
+    fortify:
+      thresholds: {cpu: 999}
+
+    fossology:
+      thresholds: {cpu: 999}
+
+    grep:
+      thresholds: {cpu: 999}
+
+    htmlhint:
+      thresholds: {cpu: 999}
+
+    jscpd:
+      thresholds: {cpu: 999}
+
+    jshint:
+      thresholds: {cpu: 999}
+
+    misspell:
+      auto-fix: true
+      thresholds: {cpu: 999}
+
+    npm-audit:
+      auto-fix: true
+      thresholds: {cpu: 999}
+
+    npm-test:
+      thresholds: {cpu: 999}
+
+    phpcs:
+      auto-fix: true
+      thresholds: {cpu: 999}
+
+    pmd:
+      thresholds: {cpu: 999}
+
+    prettier:
+      auto-fix: true
+      thresholds: {cpu: 999}
+
+    stylelint:
+      auto-fix: true
+      thresholds: {cpu: 999}
+
+    tidy:
+      auto-fix: true
+      thresholds: {cpu: 999}
+
+    # understand:
+    #   thresholds: {cpu: 999}
+
+    unused:
+      # options: [--single-occurrence, --all-likelihoods]
+      thresholds: {cpu: 999}
