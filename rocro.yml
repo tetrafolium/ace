@@ -7,70 +7,71 @@ inspecode:
 
     cpd:
       # options: [--skip-lexical-errors]
-      thresholds: {cpu: 999}
+      thresholds: {num-issues: 999}
 
     clang-format:
       auto-fix: true
-      thresholds: {cpu: 999}
+      thresholds: {num-issues: 999}
 
     eslint:
       auto-fix: true
-      thresholds: {cpu: 999}
+      thresholds: {num-issues: 999}
 
     flow:
-      thresholds: {cpu: 999}
+      thresholds: {num-issues: 999}
 
     fortify:
-      thresholds: {cpu: 999}
+      thresholds: {num-issues: 999}
 
     fossology:
-      thresholds: {cpu: 999}
+      thresholds: {num-issues: 999}
 
     grep:
-      thresholds: {cpu: 999}
+      thresholds: {num-issues: 999}
 
-    htmlhint:
-      thresholds: {cpu: 999}
+    #### HTMLHint was aborted unexpectedly.
+    # htmlhint:
+    #   thresholds: {num-issues: 999}
 
     jscpd:
-      thresholds: {cpu: 999}
+      thresholds: {num-issues: 999}
 
     jshint:
-      thresholds: {cpu: 999}
+      thresholds: {num-issues: 999}
 
     misspell:
       auto-fix: true
-      thresholds: {cpu: 999}
+      thresholds: {num-issues: 999}
 
     npm-audit:
       auto-fix: true
-      thresholds: {cpu: 999}
+      thresholds: {num-issues: 999}
 
     npm-test:
-      thresholds: {cpu: 999}
+      thresholds: {num-issues: 999}
 
     phpcs:
       auto-fix: true
-      thresholds: {cpu: 999}
+      thresholds: {num-issues: 999}
 
     pmd:
-      thresholds: {cpu: 999}
+      thresholds: {num-issues: 999}
 
     prettier:
       auto-fix: true
-      thresholds: {cpu: 999}
+      thresholds: {num-issues: 999}
 
     stylelint:
       auto-fix: true
-      thresholds: {cpu: 999}
+      thresholds: {num-issues: 999}
 
     tidy:
       auto-fix: true
-      thresholds: {cpu: 999}
+      thresholds: {num-issues: 999}
 
     # understand:
-    #   thresholds: {cpu: 999}
+    #   thresholds: {num-issues: 999}
 
     unused:
       # options: [--single-occurrence, --all-likelihoods]
-      thresholds: {cpu: 999}
+      thresholds: {num-issues: 999}
