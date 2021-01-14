@@ -13,8 +13,9 @@ inspecode:
         - api/editor.html             # aborted when processing this
         - api/range.html              # aborted when processing this
         - api/selection.html          # aborted when processing this
-        - api/tokenizer.html
-        - api/undomanager.html
-        - api/virtual_renderer.html
-        - api/resources/
+        - api/undomanager.html        # aborted when processing this
+        # - api/tokenizer.html
+        # - api/virtual_renderer.html
+        # - api/resources/
+        - demo/
       thresholds: {num-issues: 999}
