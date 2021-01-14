@@ -16,6 +16,6 @@ inspecode:
         - api/undomanager.html        # aborted when processing this
         # - api/tokenizer.html
         # - api/virtual_renderer.html
-        # - api/resources/
+        - api/resources/
         - demo/
       thresholds: {num-issues: 999}
