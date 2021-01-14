@@ -2,14 +2,20 @@
 inspecode:
 
   global:
+    ignore:
+      - "node_modules"
 
   tools:
 
     clang-format:
       auto-fix: true
-      thresholds: {num-issues: 732}
+      thresholds: {num-issues: 727}
 
     cpd:
+    - options: [--skip-lexical-errors]
+      thresholds: {num-issues: 999}   # too many issues detected: 1328 > 1000
+    - ignore:
+        - "**/*_test.js"
       options: [--skip-lexical-errors]
       thresholds: {num-issues: 999}   # too many issues detected: 1328 > 1000
 
@@ -24,7 +30,7 @@ inspecode:
     #   thresholds: {num-issues: 999}
 
     fossology:
-      thresholds: {num-issues: 50}
+      thresholds: {num-issues: 49}
 
     grep:
       thresholds: {num-issues: 109}
@@ -34,6 +40,9 @@ inspecode:
     #   thresholds: {num-issues: 999}
 
     jscpd:
+    - thresholds: {num-issues: 408}
+    - ignore:
+        - "**/*_test.js"
       thresholds: {num-issues: 408}
 
     jshint:
