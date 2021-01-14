@@ -13,4 +13,7 @@ inspecode:
         - api/editor.html
         - api/range.html
         - api/selection.html
+        - api/tokenizer.html
+        # - api/undomanaget.htlp
+        # - api/virtual_renderer.html
       thresholds: {num-issues: 999}
