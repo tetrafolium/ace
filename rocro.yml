@@ -65,7 +65,15 @@ inspecode:
       thresholds: {num-issues: 999}   # the console log exceeds the maximum size
 
     pmd:
-      thresholds: {num-issues: 999}   # too many issues detected: 13845 > 1000
+    # - thresholds: {num-issues: 999}   # too many issues detected: 13845 > 1000
+    - ignore:
+        - "lib/ace/mode/xquery/xqlint.js"         # 11653 violations
+        - "lib/ace/mode/coffee/coffee.js"         #  1206 violations
+        - "lib/ace/mode/xquery/xquery_lexer.js"   #   209 violations
+        - "lib/ace/mode/xquery/jsoniq_lexer.js"   #   195 violations
+      thresholds: {num-issues: 883}
+    - config-file: "inspecode-pmd.xml"
+      thresholds: {num-issues: 876}
 
     prettier:
     - #### FATAL ERROR: MarkCompactCollector: young object promotion failed Allocation failed - JavaScript heap out of memory

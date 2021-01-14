@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<ruleset name="PMD ruleset for Ace"
+         xmlns="http://pmd.sourceforge.net/ruleset/2.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://pmd.sourceforge.net/ruleset/2.0.0
+                             http://pmd.sourceforge.net/ruleset_2_0_0.xsd">
+
+  <description>PMD ruleset for JavaScript codes in this repository</description>
+
+  <rule ref="category/ecmascript/codestyle.xml" deprecated="true">
+    <exclude name="AssignmentInOperand" />
+    <exclude name="IfStmtsMustUseBraces" />
+    <exclude name="IfElseStmtsMustUseBraces" />
+  </rule>
+
+  <rule ref="category/ecmascript/errorprone.xml" deprecated="true">
+    <exclude name="EqualComparison" />
+    <exclude name="InnaccurateNumericLiteral" />
+  </rule>
+
+  <rule ref="category/ecmascript/bestpractices.xml" deprecated="true">
+  </rule>
+
+</ruleset>
