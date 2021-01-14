@@ -8,5 +8,6 @@ inspecode:
     #### HTMLHint was aborted unexpectedly.
     htmlhint:
       ignore:
-        - api/
+        # - api/
+        - api/edit_session.html
       thresholds: {num-issues: 999}
