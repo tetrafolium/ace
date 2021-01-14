@@ -59,7 +59,7 @@ inspecode:
       thresholds: {num-issues: 999}   # too many issues detected: 13845 > 1000
 
     prettier:
-    - auto-fix: true
+    - # auto-fix: true    # disabled to avoid break pipeline
       thresholds: {num-issues: 999}   # FATAL ERROR: CALL_AND_RETRY_LAST Allocation failed - JavaScript heap out of memory
     - machine: {cpu: 0.5}
       auto-fix: true
