@@ -11,4 +11,5 @@ inspecode:
         # - api/
         - api/edit_session.html
         - api/editor.html
+        - api/range.html
       thresholds: {num-issues: 999}
