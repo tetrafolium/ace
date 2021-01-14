@@ -16,18 +16,33 @@ inspecode:
         - "demo/"
         - "doc/"
         - "lib/"
-        - "lib/"
         - "tool/"
-      thresholds: {num-issues: 999}
+      thresholds: {num-issues: 999}   # 391 issues
     - input: "api/"
-      thresholds: {num-issues: 999}
+      thresholds: {num-issues: 999}   # 598 issues
     - input: "demo/"
-      thresholds: {num-issues: 999}
+      ignore:
+        - "demo/kitchen-sink/demo.js"     # 702 issues
+        - "demo/kitchen-sink/dev_util.js" # 426 issues
+        - "demo/kitchen-sink/doclist.js"  # 300 issues
+      thresholds: {num-issues: 999}   # 804 issues
+    - input:
+        - "demo/kitchen-sink/demo.js"     # 702 issues
+      thresholds: {num-issues: 999}   # 702 issues
+    - input:
+        - "demo/kitchen-sink/dev_util.js" # 426 issues
+        - "demo/kitchen-sink/doclist.js"  # 300 issues
+      thresholds: {num-issues: 999}   # 726 issues
     - input: "doc/"
-      thresholds: {num-issues: 999}
-    - input: "lib/"
-      thresholds: {num-issues: 999}
-    - input: "lib/"
-      thresholds: {num-issues: 999}
+      thresholds: {num-issues: 999}   # 761 issues
     - input: "tool/"
-      thresholds: {num-issues: 999}
+      ignore: "tool/mode_creator.js"
+      thresholds: {num-issues: 999}   # 723 issues
+    - input: "tool/mode_creator.js"
+      thresholds: {num-issues: 999}   # 359 issues
+    - input: "lib/"
+      ignore:
+        - "lib/ace/mode/"
+      thresholds: {num-issues: 999}   # the console log exceeds the maximum size
+    - input: "lib/ace/mode/"
+      thresholds: {num-issues: 999}   # the console log exceeds the maximum size
