@@ -51,7 +51,8 @@ inspecode:
       thresholds: {num-issues: 0}
 
     phpcs:
-      auto-fix: true
+      #### Processing xqlint.js PHP Fatal error:  Allowed memory size of 2768240640 bytes exhausted (tried to allocate 20480 bytes) in phar:///opt/phpcs/phpcbf.phar/src/Tokenizers/JS.php on line 2
+      # auto-fix: true    # disabled to avoid break pipeline
       thresholds: {num-issues: 999}   # the console log exceeds the maximum size
 
     pmd:
