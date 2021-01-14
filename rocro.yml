@@ -9,11 +9,12 @@ inspecode:
     htmlhint:
       ignore:
         # - api/
-        - api/edit_session.html
-        - api/editor.html
-        - api/range.html
-        - api/selection.html
+        - api/edit_session.html       # aborted when processing this
+        - api/editor.html             # aborted when processing this
+        - api/range.html              # aborted when processing this
+        - api/selection.html          # aborted when processing this
         - api/tokenizer.html
         - api/undomanaget.html
         - api/virtual_renderer.html
+        - api/resources/
       thresholds: {num-issues: 999}
