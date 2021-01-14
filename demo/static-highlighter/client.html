@@ -1,20 +1,15 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
-   "http://www.w3.org/TR/html4/strict.dtd">
-
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en">
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<title>Static Code highlighter using Ace</title>
-	<meta name="author" content="Fabian Jakobs">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Static Code highlighter using Ace</title>
+<meta name="author" content="Fabian Jakobs">
 </head>
 <body>
-
 <h2>Client Side Syntax Highlighting</h2>
-
 <p>Syntax highlighting using Ace language modes and themes.</p>
-    
 <div id="code"></div>
-
 <script type="text/javascript">
     var require = {
         paths: {
@@ -22,8 +17,9 @@
             ace: "../../lib/ace"
         }
     };
-</script>
-<script src="../kitchen-sink/require.js"></script>
+</script> 
+<script src="../kitchen-sink/require.js">
+</script> 
 <script>
     
 require(["ace/ext/static_highlight", "ace/mode/javascript", "ace/theme/twilight", "ace/lib/dom"], function() {
