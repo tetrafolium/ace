@@ -17,6 +17,7 @@ inspecode:
           - Generic.Commenting.DocComment
           - Generic.ControlStructures.InlineControlStructure
           - Generic.WhiteSpace.DisallowTabIndent
+          - PEAR.ControlStructures.MultiLineCondition
           - PEAR.Functions.FunctionCallSignature
           - PEAR.Functions.FunctionDeclaration
           - PEAR.WhiteSpace.ScopeIndent
