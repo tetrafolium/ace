@@ -10,4 +10,5 @@ inspecode:
       ignore:
         # - api/
         - api/edit_session.html
+        - api/editor.html
       thresholds: {num-issues: 999}
