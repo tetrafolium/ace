@@ -21,4 +21,5 @@ inspecode:
           - PEAR.Functions.FunctionCallSignature
           - PEAR.Functions.FunctionDeclaration
           - PEAR.WhiteSpace.ScopeIndent
+          - Squiz.Commenting.DocCommentAlignment
       thresholds: {num-issues: 999}
