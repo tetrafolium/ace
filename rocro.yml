@@ -8,11 +8,9 @@ inspecode:
   tools:
 
     tidy:
-    # - auto-fix: true
-    #   thresholds: {num-issues: 999}   # too many issues detected: 1355 > 1000
     - input:  ["api/"]
       auto-fix: true
-      thresholds: {num-issues: 886}
+      thresholds: {num-issues: 906}
     - ignore: ["api/"]
       auto-fix: true
-      thresholds: {num-issues: 469}
+      thresholds: {num-issues: 449}
