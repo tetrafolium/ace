@@ -1,0 +1,17 @@
+{
+  "esversion"     : 6,
+  "eqeqeq"        : true,
+  "strict"        : false,
+  "undef"         : true,
+  "unused"        : true,
+
+  "asi"           : true,
+  "laxbreak"      : true,
+  "funcscope"     : true,
+  "shadow"        : true,
+  "boss"          : false,
+  "expr"          : true,
+  "sub"           : false,
+
+  "node"          : true
+}
