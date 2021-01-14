@@ -7,85 +7,12 @@ inspecode:
 
   tools:
 
-    clang-format:
-      auto-fix: true
-      thresholds: {num-issues: 727}
-
-    cpd:
-    - options: [--skip-lexical-errors]
-      thresholds: {num-issues: 999}   # too many issues detected: 1328 > 1000
-    - ignore:
-        - "**/*_test.js"
-      options: [--skip-lexical-errors]
-      thresholds: {num-issues: 999}   # too many issues detected: 1328 > 1000
-
-    eslint:
-      auto-fix: true
-      thresholds: {num-issues: 123}
-
-    flow:
-      thresholds: {num-issues: 0}   # found no input files
-
-    # fortify:
-    #   thresholds: {num-issues: 999}
-
-    fossology:
-      thresholds: {num-issues: 49}
-
-    grep:
-      thresholds: {num-issues: 109}
-
-    #### HTMLHint was aborted unexpectedly.
-    # htmlhint:
-    #   thresholds: {num-issues: 999}
-
-    jscpd:
-    - thresholds: {num-issues: 408}
-    - ignore:
-        - "**/*_test.js"
-      thresholds: {num-issues: 408}
-
-    jshint:
-      thresholds: {num-issues: 999}   # too many issues detected: 2575 > 1000
-
-    misspell:
-      auto-fix: true
-      thresholds: {num-issues: 107}
-
-    npm-audit:
-      auto-fix: true
-      thresholds: {num-issues: 4}
-
-    npm-test:
-      thresholds: {num-issues: 0}
-
-    phpcs:
-      #### Processing xqlint.js PHP Fatal error:  Allowed memory size of 2768240640 bytes exhausted (tried to allocate 20480 bytes) in phar:///opt/phpcs/phpcbf.phar/src/Tokenizers/JS.php on line 2
-      # auto-fix: true    # disabled to avoid break pipeline
-      thresholds: {num-issues: 999}   # the console log exceeds the maximum size
-
     pmd:
-      thresholds: {num-issues: 999}   # too many issues detected: 13845 > 1000
-
-    prettier:
-    - #### FATAL ERROR: MarkCompactCollector: young object promotion failed Allocation failed - JavaScript heap out of memory
-      # auto-fix: true    # disabled to avoid break pipeline
-      thresholds: {num-issues: 999}   # FATAL ERROR: CALL_AND_RETRY_LAST Allocation failed - JavaScript heap out of memory
-    - machine: {cpu: 0.5}
-      # auto-fix: true    # disabled to avoid break pipeline
-      thresholds: {num-issues: 999}   # Prettier finished with errors. (with no error messages in console)
-
-    stylelint:
-      auto-fix: true
-      thresholds: {num-issues: 479}
-
-    tidy:
-      auto-fix: true
-      thresholds: {num-issues: 999}   # too many issues detected: 1355 > 1000
-
-    # understand:
-    #   thresholds: {num-issues: 999}
-
-    unused:
-      options: [--single-occurrence, --all-likelihoods]
-      thresholds: {num-issues: 10}
+    - thresholds: {num-issues: 999}   # too many issues detected: 13845 > 1000
+    - ignore:
+        - "lib/ace/mode/xquery/xqlint.js"
+        - "lib/ace/mode/xquery/jsoniq_lexer.js"
+        # - "lib/ace/mode/coffee/coffee.js"
+      thresholds: {num-issues: 999}
+    - config-file: "inspecode-pmd.ml"
+      thresholds: {num-issues: 999}
