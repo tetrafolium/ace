@@ -15,32 +15,29 @@ inspecode:
 
     eslint:
       auto-fix: true
-      thresholds: {num-issues: 125}
+      thresholds: {num-issues: 123}
 
     flow:
       thresholds: {num-issues: 0}   # found no input files
 
-    fortify:
-      thresholds: {num-issues: 999}
-      ## $ sourceanalyzer -b build_id -scan -Xmx2640m -f "${OUTPUT}"
-      ## [error]: Unable to load build session with ID "build_id". See log file for more details.
-      ## Fortify finished with errors.
+    # fortify:
+    #   thresholds: {num-issues: 999}
 
     fossology:
       thresholds: {num-issues: 50}
 
     grep:
-      thresholds: {num-issues: 110}
+      thresholds: {num-issues: 109}
 
     #### HTMLHint was aborted unexpectedly.
     # htmlhint:
     #   thresholds: {num-issues: 999}
 
     jscpd:
-      thresholds: {num-issues: 410}
+      thresholds: {num-issues: 408}
 
     jshint:
-      thresholds: {num-issues: 999}   # too many issues detected: 2576 > 1000
+      thresholds: {num-issues: 999}   # too many issues detected: 2575 > 1000
 
     misspell:
       auto-fix: true
