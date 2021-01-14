@@ -14,5 +14,5 @@ inspecode:
         - "lib/ace/mode/xquery/jsoniq_lexer.js"
         - "lib/ace/mode/coffee/coffee.js"
       thresholds: {num-issues: 999}
-    - config-file: "inspecode-pmd.ml"
+    - config-file: "inspecode-pmd.xml"
       thresholds: {num-issues: 999}
