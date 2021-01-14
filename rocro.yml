@@ -14,6 +14,6 @@ inspecode:
         - "lib/ace/mode/coffee/coffee.js"         #  1206 violations
         - "lib/ace/mode/xquery/xquery_lexer.js"   #   209 violations
         - "lib/ace/mode/xquery/jsoniq_lexer.js"   #   195 violations
-      thresholds: {num-issues: 582}
+      thresholds: {num-issues: 883}
     - config-file: "inspecode-pmd.xml"
-      thresholds: {num-issues: 575}
+      thresholds: {num-issues: 876}
