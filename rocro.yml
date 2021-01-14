@@ -33,8 +33,8 @@ inspecode:
       thresholds: {num-issues: 110}
 
     #### HTMLHint was aborted unexpectedly.
-    htmlhint:
-      thresholds: {num-issues: 999}
+    # htmlhint:
+    #   thresholds: {num-issues: 999}
 
     jscpd:
       thresholds: {num-issues: 410}
