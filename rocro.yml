@@ -11,38 +11,13 @@ inspecode:
       #### Processing xqlint.js PHP Fatal error:  Allowed memory size of 2768240640 bytes exhausted (tried to allocate 20480 bytes) in phar:///opt/phpcs/phpcbf.phar/src/Tokenizers/JS.php on line 2
       # - auto-fix: true    # disabled to avoid break pipeline
       #   thresholds: {num-issues: 999}   # the console log exceeds the maximum size
-    - ignore:
-        - "api/"
-        - "demo/"
-        - "doc/"
-        - "lib/"
-        - "tool/"
-      thresholds: {num-issues: 999}   # 391 issues
-    - input: "api/"
-      thresholds: {num-issues: 999}   # 598 issues
-    - input: "demo/"
-      ignore:
-        - "demo/kitchen-sink/demo.js"     # 702 issues
-        - "demo/kitchen-sink/dev_util.js" # 426 issues
-        - "demo/kitchen-sink/doclist.js"  # 300 issues
-      thresholds: {num-issues: 999}   # 804 issues
-    - input:
-        - "demo/kitchen-sink/demo.js"     # 702 issues
-      thresholds: {num-issues: 999}   # 702 issues
-    - input:
-        - "demo/kitchen-sink/dev_util.js" # 426 issues
-        - "demo/kitchen-sink/doclist.js"  # 300 issues
-      thresholds: {num-issues: 999}   # 726 issues
-    - input: "doc/"
-      thresholds: {num-issues: 999}   # 761 issues
-    - input: "tool/"
-      ignore: "tool/mode_creator.js"
-      thresholds: {num-issues: 999}   # 723 issues
-    - input: "tool/mode_creator.js"
-      thresholds: {num-issues: 999}   # 359 issues
-    - input: "lib/"
-      ignore:
-        - "lib/ace/mode/"
-      thresholds: {num-issues: 999}   # the console log exceeds the maximum size
-    - input: "lib/ace/mode/"
-      thresholds: {num-issues: 999}   # the console log exceeds the maximum size
+      options:
+        --standard: PEAR
+        --exclude:
+          - Generic.Commenting.DocComment
+          - Generic.ControlStructures.InlineControlStructure
+          # - Generic.WhiteSpace.DisallowTabIndent
+          - PEAR.Functions.FunctionCallSignature
+          - PEAR.Functions.FunctionDeclaration
+          - PEAR.WhiteSpace.ScopeIndent
+      thresholds: {num-issues: 999}
