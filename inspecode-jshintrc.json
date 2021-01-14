@@ -1,16 +1,18 @@
 {
   "esversion"     : 6,
-  "eqeqeq"        : true,
+  "eqeqeq"        : false,
   "strict"        : false,
-  "undef"         : true,
-  "unused"        : true,
+  "undef"         : false,
+  "unused"        : false,
 
   "asi"           : true,
-  "laxbreak"      : true,
-  "funcscope"     : true,
-  "shadow"        : true,
-  "boss"          : false,
+  "boss"          : true,
   "expr"          : true,
+  "funcscope"     : true,
+  "laxbreak"      : true,
+  "laxcomma"      : true,
+  "multistr"      : true,
+  "shadow"        : true,
   "sub"           : false,
 
   "node"          : true
