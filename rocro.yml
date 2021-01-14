@@ -60,12 +60,22 @@ inspecode:
       thresholds: {num-issues: 0}
 
     phpcs:
-      #### Processing xqlint.js PHP Fatal error:  Allowed memory size of 2768240640 bytes exhausted (tried to allocate 20480 bytes) in phar:///opt/phpcs/phpcbf.phar/src/Tokenizers/JS.php on line 2
-      # auto-fix: true    # disabled to avoid break pipeline
-      thresholds: {num-issues: 999}   # the console log exceeds the maximum size
+      options:
+        --standard: PEAR
+        --exclude:
+          - Generic.Commenting.DocComment
+          - Generic.ControlStructures.InlineControlStructure
+          - Generic.WhiteSpace.DisallowTabIndent
+          - PEAR.ControlStructures.MultiLineCondition
+          - PEAR.Functions.FunctionCallSignature
+          - PEAR.Functions.FunctionDeclaration
+          - PEAR.WhiteSpace.ScopeIndent
+          - Squiz.Commenting.DocCommentAlignment
+      machine: {cpu: 1.0}   # to avoid PHP Fatal error (described below)
+          ## PHP Fatal error:  Allowed memory size of 2768240640 bytes exhausted (tried to allocate 20480 bytes) in phar:///opt/phpcs/phpcs.phar/src/Tokenizers/JS.php on line 2
+      thresholds: {num-issues: 17}
 
     pmd:
-    # - thresholds: {num-issues: 999}   # too many issues detected: 13845 > 1000
     - ignore:
         - "lib/ace/mode/xquery/xqlint.js"         # 11653 violations
         - "lib/ace/mode/coffee/coffee.js"         #  1206 violations
