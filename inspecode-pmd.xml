@@ -7,15 +7,16 @@
 
   <description>PMD ruleset for JavaScript codes in this repository</description>
 
-  <rule ref="category/ecmascript/codestyle.xml">
+  <rule ref="category/ecmascript/codestyle.xml" deprecated="true">
     <!-- <exclude name="AssignmentInOperand"/> -->
   </rule>
 
-  <rule ref="category/ecmascript/errorprone.xml">
+  <rule ref="category/ecmascript/errorprone.xml" deprecated="true">
     <!-- <exclude name="EqualComparison"/> -->
     <!-- <exclude name="InnaccurateNumericLiteral"/> -->
   </rule>
 
-  <rule ref="category/ecmascript/bestpractices.xml">
+  <rule ref="category/ecmascript/bestpractices.xml" deprecated="true">
+  </rule>
 
 </ruleset>
