@@ -12,12 +12,12 @@ inspecode:
       thresholds: {num-issues: 727}
 
     cpd:
-    - options: [--skip-lexical-errors]
-      thresholds: {num-issues: 999}   # too many issues detected: 1328 > 1000
-    - ignore:
+      ignore:
         - "**/*_test.js"
-      options: [--skip-lexical-errors]
-      thresholds: {num-issues: 999}   # too many issues detected: 1328 > 1000
+      options:
+        --minimum-tokens: 200
+        --skip-lexical-errors:
+      thresholds: {num-issues: 727}
 
     eslint:
       auto-fix: true
