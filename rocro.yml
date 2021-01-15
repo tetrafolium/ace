@@ -2,45 +2,52 @@
 inspecode:
 
   global:
+    ignore:
+      - "node_modules"
 
   tools:
 
     clang-format:
       auto-fix: true
-      thresholds: {num-issues: 732}
+      thresholds: {num-issues: 727}
 
     cpd:
-      options: [--skip-lexical-errors]
-      thresholds: {num-issues: 999}   # too many issues detected: 1328 > 1000
+      ignore:
+        - "**/*_test.js"
+      options:
+        --minimum-tokens: 200
+        --skip-lexical-errors:
+      thresholds: {num-issues: 727}
 
     eslint:
       auto-fix: true
-      thresholds: {num-issues: 125}
+      thresholds: {num-issues: 123}
 
     flow:
       thresholds: {num-issues: 0}   # found no input files
 
-    fortify:
-      thresholds: {num-issues: 999}
-      ## $ sourceanalyzer -b build_id -scan -Xmx2640m -f "${OUTPUT}"
-      ## [error]: Unable to load build session with ID "build_id". See log file for more details.
-      ## Fortify finished with errors.
+    # fortify:
+    #   thresholds: {num-issues: 999}
 
     fossology:
-      thresholds: {num-issues: 50}
+      thresholds: {num-issues: 49}
 
     grep:
-      thresholds: {num-issues: 110}
+      thresholds: {num-issues: 109}
 
     #### HTMLHint was aborted unexpectedly.
     # htmlhint:
     #   thresholds: {num-issues: 999}
 
     jscpd:
-      thresholds: {num-issues: 410}
+    - thresholds: {num-issues: 408}
+    - ignore:
+        - "**/*_test.js"
+      thresholds: {num-issues: 408}
 
     jshint:
-      thresholds: {num-issues: 999}   # too many issues detected: 2576 > 1000
+      config-file: "inspecode-jshintrc.json"
+      thresholds: {num-issues: 930}
 
     misspell:
       auto-fix: true
@@ -54,32 +61,50 @@ inspecode:
       thresholds: {num-issues: 0}
 
     phpcs:
-      auto-fix: true
-      thresholds: {num-issues: 999}   # the console log exceeds the maximum size
+      options:
+        --standard: PEAR
+        --exclude:
+          - Generic.Commenting.DocComment
+          - Generic.ControlStructures.InlineControlStructure
+          - Generic.WhiteSpace.DisallowTabIndent
+          - PEAR.ControlStructures.MultiLineCondition
+          - PEAR.Functions.FunctionCallSignature
+          - PEAR.Functions.FunctionDeclaration
+          - PEAR.WhiteSpace.ScopeIndent
+          - Squiz.Commenting.DocCommentAlignment
+      machine: {cpu: 1.0}   # to avoid PHP Fatal error (described below)
+          ## PHP Fatal error:  Allowed memory size of 2768240640 bytes exhausted (tried to allocate 20480 bytes) in phar:///opt/phpcs/phpcs.phar/src/Tokenizers/JS.php on line 2
+      thresholds: {num-issues: 17}
 
     pmd:
-      thresholds: {num-issues: 999}   # too many issues detected: 13845 > 1000
+    - ignore:
+        - "lib/ace/mode/xquery/xqlint.js"         # 11653 violations
+        - "lib/ace/mode/coffee/coffee.js"         #  1206 violations
+        - "lib/ace/mode/xquery/xquery_lexer.js"   #   209 violations
+        - "lib/ace/mode/xquery/jsoniq_lexer.js"   #   195 violations
+      thresholds: {num-issues: 883}
+    - config-file: "inspecode-pmd.xml"
+      thresholds: {num-issues: 876}
 
     prettier:
-    - auto-fix: true
+    - #### FATAL ERROR: MarkCompactCollector: young object promotion failed Allocation failed - JavaScript heap out of memory
+      # auto-fix: true    # disabled to avoid break pipeline
       thresholds: {num-issues: 999}   # FATAL ERROR: CALL_AND_RETRY_LAST Allocation failed - JavaScript heap out of memory
     - machine: {cpu: 0.5}
-      auto-fix: true
-      thresholds: {num-issues: 999}
-    - machine: {cpu: 0.75}
-      auto-fix: true
-      thresholds: {num-issues: 999}
-    - machine: {cpu: 1.0}
-      auto-fix: true
-      thresholds: {num-issues: 999}
+      # auto-fix: true    # disabled to avoid break pipeline
+      thresholds: {num-issues: 999}   # Prettier finished with errors. (with no error messages in console)
 
     stylelint:
       auto-fix: true
       thresholds: {num-issues: 479}
 
     tidy:
+    - input:  ["api/"]
       auto-fix: true
-      thresholds: {num-issues: 999}   # too many issues detected: 1355 > 1000
+      thresholds: {num-issues: 906}
+    - ignore: ["api/"]
+      auto-fix: true
+      thresholds: {num-issues: 449}
 
     # understand:
     #   thresholds: {num-issues: 999}
