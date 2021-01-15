@@ -1,3 +1,8 @@
 {
-  "esversion": 6
+  "esversion": 6,
+  "asi":       true,
+  "expr":      true,
+  "funcscope": true,
+  "multistr":  true,
+  "shadow":    true
 }
