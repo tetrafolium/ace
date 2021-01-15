@@ -1,62 +1,56 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
-   "http://www.w3.org/TR/html4/strict.dtd">
-
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en">
 <head>
-    <base href="..">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Ace Profile  util</title>
-    <link rel="stylesheet" href="demo/kitchen-sink/styles.css" type="text/css" media="screen" charset="utf-8">
-    <link href="../doc/site/images/favicon.ico" rel="icon" type="image/x-icon">
+<base href="..">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Ace Profile util</title>
+<link rel="stylesheet" href="demo/kitchen-sink/styles.css" type=
+"text/css" media="screen" charset="utf-8">
+<link href="../doc/site/images/favicon.ico" rel="icon" type=
+"image/x-icon">
 </head>
 <body>
 <div style="position:absolute;height:100%;width:260px">
-  <div style="position: absolute; overflow: hidden; top:20px; bottom:0">
-  <div style="width: 120%; height:100%; overflow-y: scroll">
-
-  <table>
-    <tr>
-      <td colspan="2">
-        <label for="profile">profile</label>
-        <input type="checkbox" checked id="profile"></input>
-        <label for="timeout">delay</label>
-        <input id="timeout" type="text" value="3" style="width:10em"></input>
-      </td>
-    </tr>
-    <tr>
-      <td colspan="2">
-        <button onclick = "start(this.textContent)">scroll</button>
-        <button onclick = "start(this.textContent)">select</button>
-        <button onclick = "start(this.textContent)">type</button>
-        <button onclick = "start(this.textContent)">selectH</button>
-      </td>
-    </tr>
-    <tr>
-      <td colspan="2">
-        <button onclick = "start(this.textContent)">tokenize</button>
-      </td>
-    </tr>
-
-  </table>
-  <div id="optionsPanel"></div>
-
-  </div>
-  </div>
+<div style=
+"position: absolute; overflow: hidden; top:20px; bottom:0">
+<div style="width: 120%; height:100%; overflow-y: scroll">
+<table>
+<tr>
+<td colspan="2"><label for="profile">profile</label> <input type=
+"checkbox" checked id="profile"> <label for="timeout">delay</label>
+<input id="timeout" type="text" value="3" style="width:10em"></td>
+</tr>
+<tr>
+<td colspan="2"><button onclick=
+"start(this.textContent)">scroll</button> <button onclick=
+"start(this.textContent)">select</button> <button onclick=
+"start(this.textContent)">type</button> <button onclick=
+"start(this.textContent)">selectH</button></td>
+</tr>
+<tr>
+<td colspan="2"><button onclick=
+"start(this.textContent)">tokenize</button></td>
+</tr>
+</table>
+<div id="optionsPanel"></div>
 </div>
-  <div id="editor-container"></div>
-
+</div>
+</div>
+<div id="editor-container"></div>
 <!--DEVEL-->
-  <script type="text/javascript">
+<script type="text/javascript">
       var require = {
           baseUrl: window.location.protocol + "//" + window.location.host + window.location.pathname.split("/").slice(0, -1).join("/"),
           paths: {
               ace: "../lib/ace"
           }
       };
-  </script>
-  <script src="demo/kitchen-sink/require.js" data-main="../demo/kitchen-sink/demo" type="text/javascript"></script>
-
-  <script>
+</script> 
+<script src="demo/kitchen-sink/require.js" data-main=
+"../demo/kitchen-sink/demo" type="text/javascript">
+</script> 
+<script>
     if (!Date.now) {
         Date.now = function() { return (new Date()).getTime() };
     }
@@ -154,7 +148,6 @@
             end()
     }
 
-  </script>
-
+</script>
 </body>
 </html>

@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-    <base href="../">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Ace Mode Creator</title>
-    <meta name="author" content="Harutyun Amirjanyan">
-    <style type="text/css" >
+<base href="../">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Ace Mode Creator</title>
+<meta name="author" content="Harutyun Amirjanyan">
+<style type="text/css">
         body, html {
             overflow: hidden;
             height: 100%;
@@ -49,40 +48,28 @@
             position: relative;
             width: 100%;
         }
-    </style>
-    <link href="../doc/site/images/favicon.ico" rel="icon" type="image/x-icon">
+</style>
+<link href="../doc/site/images/favicon.ico" rel="icon" type=
+"image/x-icon">
 </head>
 <body>
-
-<div id="header">
-    <label for="modeEl">mode</label>
-    <select id="modeEl" size="1"></select>
-    <input type="button" value="&#10227;" title="sync" id="syncToMode"></select>
-    <span id="tablist"></span>
-    <input type="button" value="Save" id="saveButton1"></select>
-    <span class="separator-h"></span>
-    <label for="autorunEl">live preview</label>
-    <input type="checkbox" label="autorun" id="autorunEl" checked>
-    <span class="separator-h"></span>
-    <input type="button" value="measure speed" id="perfTest"></select>
-
-
-    <div style='float:right'>
-        <label for="themeEl">Theme</label>
-        <select id="themeEl" size="1" value="textmate"></select>
-        <span class="separator-h"></span>
-        <input type="button" value="Save" id="saveButton2"></select>
-        <label for="doc">Document</label>
-        <select id="doc" size="1"></select>
-    </div>
+<div id="header"><label for="modeEl">mode</label> <select id=
+"modeEl" size="1"></select> <input type="button" value="⟳" title=
+"sync" id="syncToMode"> <span id="tablist"></span> <input type=
+"button" value="Save" id="saveButton1"> <label for="autorunEl">live
+preview</label> <input type="checkbox" label="autorun" id=
+"autorunEl" checked> <input type="button" value="measure speed" id=
+"perfTest">
+<div style='float:right'><label for="themeEl">Theme</label>
+<select id="themeEl" size="1" value="textmate"></select>
+<input type="button" value="Save" id="saveButton2"> <label for=
+"doc">Document</label> <select id="doc" size="1"></select></div>
 </div>
 <div id="editor"></div>
-<div id="console" style="display:none">
-    <span id="closeBtn" onclick="this.parentNode.style.display='none'"></span>
-    <div id="consoleEditor"></div>
+<div id="console" style="display:none"><span id="closeBtn" onclick=
+"this.parentNode.style.display='none'"></span>
+<div id="consoleEditor"></div>
 </div>
-
-
 <script type="text/javascript">
   var require = {
       baseUrl: window.location.protocol + "//" + window.location.host + window.location.pathname.split("/").slice(0, -1).join("/"),
@@ -92,10 +79,9 @@
           tool: "../tool"
       }
   };
+</script> 
+<script src="./demo/kitchen-sink/require.js" data-main=
+"mode_creator">
 </script>
-<script src="./demo/kitchen-sink/require.js" data-main="mode_creator"></script>
-
-
-
 </body>
 </html>

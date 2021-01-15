@@ -1,14 +1,11 @@
 <!DOCTYPE html>
-
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Dom test</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Dom test</title>
 </head>
 <body>
-
 <pre id="root"></pre>
-
 <script type="text/javascript" charset="utf-8">
     var tests = {};
     tests.innerHTML = function() {
@@ -17,14 +14,14 @@
             for (var i = 0; i < lines.length; i++) {
                 html.push("<div class='line'>")
                 renderLine(html, lines[i])
-                html.push("</div>")
+                html.push("<\/div>")
             }
             rootEl.innerHTML = html.join("")
         }
     
         function renderLine(html, tokens) {
             for (var i = 0; i < tokens.length; i ++) {
-                html.push("<span class='", tokens[i], "'>", tokens[i], "</span>")
+                html.push("<span class='", tokens[i], "'>", tokens[i], "<\/span>")
             }
         }
         return update;
@@ -382,9 +379,9 @@
     
     function showResults() {
         document.getElementById("root").innerHTML = Object.keys(tests).map(function(x) { 
-            return "<a href='?test=" + x + "'>" + x + "</a>: " + (localStorage["m_" + x] || "no results");
+            return "<a href='?test=" + x + "'>" + x + "<\/a>: " + (localStorage["m_" + x] || "no results");
         }).join("<br>")
-        + "<br><br><a onclick='clearResults()' href='?'>clearResults</a>";
+        + "<br><br><a onclick='clearResults()' href='?'>clearResults<\/a>";
     }
     
     if (method && tests[method]) {
@@ -399,6 +396,5 @@
     }
     
 </script>
-
 </body>
 </html>

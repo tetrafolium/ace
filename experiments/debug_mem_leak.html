@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <script src="../demo/kitchen-sink/require.js"></script>
-        <script type="text/javascript">
+<head>
+<meta charset="utf-8">
+<script src="../demo/kitchen-sink/require.js">
+</script>
+<script type="text/javascript">
             require.config({
                 paths: { ace: "../lib/ace" },
                 waitSeconds: 0
             });
-        </script>
-    </head>
-    <body>
-        <p><button onclick="toggleEditor()">Toggle editor</button></p>
-
-        <div id="container"></div>
-        <script>
+</script>
+<title></title>
+</head>
+<body>
+<p><button onclick="toggleEditor()">Toggle editor</button></p>
+<div id="container"></div>
+<script>
             var editor;
             var counter = 0
 
@@ -54,6 +55,6 @@
                 window.ace = ace;
                 toggleEditor();            
             })
-        </script>
-    </body>
+</script>
+</body>
 </html>
