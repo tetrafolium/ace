@@ -8,11 +8,9 @@ inspecode:
   tools:
 
     cpd:
-    - options: [--skip-lexical-errors]
-      thresholds: {num-issues: 999}   # too many issues detected: 1328 > 1000
-    - ignore:
+      ignore:
         - "**/*_test.js"
       options:
         --skip-lexical-errors:
-        --minimum-tokens: 100
+        --minimum-tokens: 200
       thresholds: {num-issues: 999}
