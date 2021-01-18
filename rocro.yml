@@ -9,7 +9,7 @@ inspecode:
 
     clang-format:
       auto-fix: true
-      thresholds: {num-issues: 727}
+      thresholds: {num-issues: 732}
 
     cpd:
       ignore:
@@ -17,7 +17,7 @@ inspecode:
       options:
         --minimum-tokens: 200
         --skip-lexical-errors:
-      thresholds: {num-issues: 732}
+      thresholds: {num-issues: 727}
 
     eslint:
       auto-fix: true
