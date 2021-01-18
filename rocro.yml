@@ -17,11 +17,11 @@ inspecode:
       options:
         --minimum-tokens: 200
         --skip-lexical-errors:
-      thresholds: {num-issues: 727}
+      thresholds: {num-issues: 732}
 
     eslint:
       auto-fix: true
-      thresholds: {num-issues: 123}
+      thresholds: {num-issues: 125}
 
     flow:
       thresholds: {num-issues: 0}   # found no input files
@@ -33,21 +33,21 @@ inspecode:
       thresholds: {num-issues: 49}
 
     grep:
-      thresholds: {num-issues: 109}
+      thresholds: {num-issues: 110}
 
     #### HTMLHint was aborted unexpectedly.
     # htmlhint:
     #   thresholds: {num-issues: 999}
 
     jscpd:
-    - thresholds: {num-issues: 408}
+    - thresholds: {num-issues: 410}
     - ignore:
         - "**/*_test.js"
-      thresholds: {num-issues: 408}
+      thresholds: {num-issues: 347}
 
     jshint:
       config-file: "inspecode-jshintrc.json"
-      thresholds: {num-issues: 930}
+      thresholds: {num-issues: 929}
 
     misspell:
       auto-fix: true
@@ -104,7 +104,7 @@ inspecode:
       thresholds: {num-issues: 906}
     - ignore: ["api/"]
       auto-fix: true
-      thresholds: {num-issues: 449}
+      thresholds: {num-issues: 440}
 
     # understand:
     #   thresholds: {num-issues: 999}
