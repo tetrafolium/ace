@@ -35,7 +35,7 @@ inspecode:
     grep:
       thresholds: {num-issues: 110}
 
-    #### HTMLHint was aborted unexpectedly.
+    #### HTMLHint was aborted unexpectedly. (codelift-plugins#1786)
     # htmlhint:
     #   thresholds: {num-issues: 999}
 
@@ -90,7 +90,8 @@ inspecode:
     - #### FATAL ERROR: MarkCompactCollector: young object promotion failed Allocation failed - JavaScript heap out of memory
       # auto-fix: true    # disabled to avoid break pipeline
       thresholds: {num-issues: 999}   # FATAL ERROR: CALL_AND_RETRY_LAST Allocation failed - JavaScript heap out of memory
-    - machine: {cpu: 0.5}
+    - #### (codelift-plugins#1789)
+      machine: {cpu: 0.5}
       # auto-fix: true    # disabled to avoid break pipeline
       thresholds: {num-issues: 999}   # Prettier finished with errors. (with no error messages in console)
 
