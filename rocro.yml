@@ -18,14 +18,5 @@ inspecode:
         - api/virtual_renderer.html
         - api/resources/
         - demo/
-      thresholds: {num-issues: 999}   ## HTMLHint was aborted unexpectedly.
-      # machine: {cpu: 0.25}    # (default)
-    - ignore: *htmlhint-ignore-settings
-      thresholds: {num-issues: 999}
-      machine: {cpu: 0.5}
-    - ignore: *htmlhint-ignore-settings
-      thresholds: {num-issues: 999}
-      machine: {cpu: 0.75}
-    - ignore: *htmlhint-ignore-settings
       thresholds: {num-issues: 999}
       machine: {cpu: 1.0}
