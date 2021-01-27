@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Editor</title>
-  <style type="text/css" media="screen">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Editor</title>
+
+<style type="text/css" media="screen">
 
     .ace_editor {
         border: 1px solid lightgray;
@@ -52,33 +53,30 @@
         background: #a9bfc7;
     }
     .scrollmargin input > {margin: 10px}
-    </style>
+</style>
 </head>
 <body>
 <div class="transformed">
-    <div class="wrapper">
-        <pre id="editor1">editor1</pre>
-        <pre id="editor2">editor2</pre>
-        <pre id="editor3">editor3</pre> 
-    </div>
-    <div class="scrollmargin"></div>
-    <pre id="editor4">editor4</pre>
-    <div class="scrollmargin">
-        <textarea></textarea>
-    </div>
-    <pre id="editor">editor</pre>
-    <div class="scrollmargin" style="transform: scale(2) translateY(3em);">
-        <input type="checkbox" id="option">Auto scroll into view
-
-        <input type="range" onchange="document.body.style.zoom = 1 + value/250">css Zoom
-        <input type="range" onchange="document.body.style.transform = 'rotateZ(' + (this.value * 18) +'deg)'">css Transform
-    </div>
-</div>
-
+<div class="wrapper">
+<pre id="editor1">editor1</pre>
+<pre id="editor2">editor2</pre>
+<pre id="editor3">editor3</pre></div>
+<div class="scrollmargin"></div>
+<pre id="editor4">editor4</pre>
 <div class="scrollmargin">
+<textarea></textarea></div>
+<pre id="editor">editor</pre>
+<div class="scrollmargin" style=
+"transform: scale(2) translateY(3em);"><input type="checkbox" id=
+"option">Auto scroll into view <input type="range" onchange=
+"document.body.style.zoom = 1 + value/250">css Zoom <input type=
+"range" onchange=
+"document.body.style.transform = 'rotateZ(' + (this.value * 18) +'deg)'">
+css Transform</div>
 </div>
-
-<script src="kitchen-sink/require.js"></script>
+<div class="scrollmargin"></div>
+<script src="kitchen-sink/require.js">
+</script> 
 <script>
 // setup paths
 require.config({paths: { "ace" : "../lib/ace"}});
@@ -135,9 +133,8 @@ require(["ace/ace", "ace/ext/language_tools"], function(ace) {
     window.editor = editor;
     window.editor4 = editor4;
 });
+</script> 
+<script src="./show_own_source.js">
 </script>
-
-<script src="./show_own_source.js"></script>
-
 </body>
 </html>
