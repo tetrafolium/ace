@@ -5,18 +5,17 @@ inspecode:
 
   tools:
 
-    #### (codelift-plugins#1786)
     htmlhint:
-    - ignore: &htmlhint-ignore-settings
-        # - api/
-        - api/edit_session.html       # aborted when processing this
-        - api/editor.html             # aborted when processing this
-        - api/range.html              # aborted when processing this
-        - api/selection.html          # aborted when processing this
-        - api/undomanager.html        # aborted when processing this
-        # - api/tokenizer.html
-        - api/virtual_renderer.html
-        - api/resources/
-        - demo/
-      thresholds: {num-issues: 999}   ## HTMLHint was aborted unexpectedly.
-      # machine: {cpu: 0.25}    # (default)
+    - thresholds: {num-issues: 999}
+    # - ignore:
+    #     # - api/
+    #     - api/edit_session.html       # aborted when processing this
+    #     - api/editor.html             # aborted when processing this
+    #     - api/range.html              # aborted when processing this
+    #     - api/selection.html          # aborted when processing this
+    #     - api/undomanager.html        # aborted when processing this
+    #     # - api/tokenizer.html
+    #     - api/virtual_renderer.html
+    #     - api/resources/
+    #     - demo/
+    #   thresholds: {num-issues: 479}
