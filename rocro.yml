@@ -34,4 +34,4 @@ inspecode:
     - thresholds: {num-issues: 999}
       input: 'api/resources/'
     - thresholds: {num-issues: 999}
-      input: 'demo/''
+      input: 'demo/'
