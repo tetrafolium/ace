@@ -6,32 +6,11 @@ inspecode:
   tools:
 
     htmlhint:
-    - thresholds: {num-issues: 999}   # too many issues detected: 1951 > 1000
-    # - ignore:
-    #     # - api/
-    #     - api/edit_session.html
-    #     - api/editor.html
-    #     - api/range.html
-    #     - api/selection.html
-    #     - api/undomanager.html
-    #     # - api/tokenizer.html
-    #     - api/virtual_renderer.html
-    #     - api/resources/
-    #     - demo/
-    #   thresholds: {num-issues: 479}
-    - thresholds: {num-issues: 999}
-      input: 'api/edit_session.html'
-    - thresholds: {num-issues: 999}
-      input: 'api/editor.html'
-    - thresholds: {num-issues: 999}
-      input: 'api/range.html'
-    - thresholds: {num-issues: 999}
-      input: 'api/selection.html'
-    - thresholds: {num-issues: 999}
-      input: 'api/undomanager.html'
-    - thresholds: {num-issues: 999}
-      input: 'api/virtual_renderer.html'
-    - thresholds: {num-issues: 999}
-      input: 'api/resources/'
-    - thresholds: {num-issues: 999}
-      input: 'demo/'
+    # - thresholds: {num-issues: 999}   # too many issues detected: 1951 > 1000
+    - input: &html-files-part-1
+        - 'api/edit_session.html'   # 475 issues
+        - 'api/editor.html'         # 323 issues
+        - 'api/range.html'          # 177 issues
+      thresholds: {num-issues: 975}
+    - ignore: *html-files-part-1
+      thresholds: {num-issues: 976}
