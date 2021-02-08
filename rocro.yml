@@ -3,7 +3,7 @@ inspecode:
 
   global:
     ignore:
-      - "node_modules"
+      - 'node_modules'
 
   tools:
 
@@ -13,7 +13,7 @@ inspecode:
 
     cpd:
       ignore:
-        - "**/*_test.js"
+        - '**/*_test.js'
       options:
         --minimum-tokens: 200
         --skip-lexical-errors:
@@ -35,18 +35,23 @@ inspecode:
     grep:
       thresholds: {num-issues: 110}
 
-    #### HTMLHint was aborted unexpectedly. (codelift-plugins#1786)
-    # htmlhint:
-    #   thresholds: {num-issues: 999}
+    htmlhint:
+    - input: &htmlhint-files-part-1
+        - 'api/edit_session.html'   # 475 issues
+        - 'api/editor.html'         # 323 issues
+        - 'api/range.html'          # 177 issues
+      thresholds: {num-issues: 975}
+    - ignore: *htmlhint-files-part-1
+      thresholds: {num-issues: 976}
 
     jscpd:
     - thresholds: {num-issues: 410}
     - ignore:
-        - "**/*_test.js"
+        - '**/*_test.js'
       thresholds: {num-issues: 347}
 
     jshint:
-      config-file: "inspecode-jshintrc.json"
+      config-file: 'inspecode-jshintrc.json'
       thresholds: {num-issues: 929}
 
     misspell:
@@ -78,12 +83,12 @@ inspecode:
 
     pmd:
     - ignore:
-        - "lib/ace/mode/xquery/xqlint.js"         # 11653 violations
-        - "lib/ace/mode/coffee/coffee.js"         #  1206 violations
-        - "lib/ace/mode/xquery/xquery_lexer.js"   #   209 violations
-        - "lib/ace/mode/xquery/jsoniq_lexer.js"   #   195 violations
+        - 'lib/ace/mode/xquery/xqlint.js'         # 11653 violations
+        - 'lib/ace/mode/coffee/coffee.js'         #  1206 violations
+        - 'lib/ace/mode/xquery/xquery_lexer.js'   #   209 violations
+        - 'lib/ace/mode/xquery/jsoniq_lexer.js'   #   195 violations
       thresholds: {num-issues: 883}
-    - config-file: "inspecode-pmd.xml"
+    - config-file: 'inspecode-pmd.xml'
       thresholds: {num-issues: 876}
 
     prettier:
@@ -100,10 +105,11 @@ inspecode:
       thresholds: {num-issues: 479}
 
     tidy:
-    - input:  ["api/"]
+    - input: &tidy-subdirs-part-1
+        - 'api/'
       auto-fix: true
       thresholds: {num-issues: 906}
-    - ignore: ["api/"]
+    - ignore: *tidy-subdirs-part-1
       auto-fix: true
       thresholds: {num-issues: 440}
 
